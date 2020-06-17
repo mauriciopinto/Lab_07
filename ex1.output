@@ -1,0 +1,75 @@
+# started on Tue Jun 16 12:52:01 2020
+
+#           time             counts unit events
+    10.000141060            132.005      L1-dcache-loads                                             
+    10.000141060              9.914      L1-dcache-load-misses     #    7,51% of all L1-dcache hits  
+    10.000141060             65.388      L1-dcache-stores                                            
+    10.000141060            132.005      dTLB-loads                                                  
+    10.000141060      <not counted>      dTLB-load-misses                                              (0,00%)
+    10.000141060    <not supported>      dTLB-prefetch-misses                                        
+    20.000578573      <not counted>      L1-dcache-loads                                             
+    20.000578573      <not counted>      L1-dcache-load-misses                                       
+    20.000578573      <not counted>      L1-dcache-stores                                            
+    20.000578573      <not counted>      dTLB-loads                                                  
+    20.000578573      <not counted>      dTLB-load-misses                                              (0,00%)
+    20.000578573    <not supported>      dTLB-prefetch-misses                                        
+    30.000925763      <not counted>      L1-dcache-loads                                             
+    30.000925763      <not counted>      L1-dcache-load-misses                                       
+    30.000925763      <not counted>      L1-dcache-stores                                            
+    30.000925763      <not counted>      dTLB-loads                                                  
+    30.000925763      <not counted>      dTLB-load-misses                                              (0,00%)
+    30.000925763    <not supported>      dTLB-prefetch-misses                                        
+    40.001278756      <not counted>      L1-dcache-loads                                             
+    40.001278756      <not counted>      L1-dcache-load-misses                                       
+    40.001278756      <not counted>      L1-dcache-stores                                            
+    40.001278756      <not counted>      dTLB-loads                                                  
+    40.001278756      <not counted>      dTLB-load-misses                                              (0,00%)
+    40.001278756    <not supported>      dTLB-prefetch-misses                                        
+    50.001611010      <not counted>      L1-dcache-loads                                             
+    50.001611010      <not counted>      L1-dcache-load-misses                                       
+    50.001611010      <not counted>      L1-dcache-stores                                            
+    50.001611010      <not counted>      dTLB-loads                                                  
+    50.001611010      <not counted>      dTLB-load-misses                                              (0,00%)
+    50.001611010    <not supported>      dTLB-prefetch-misses                                        
+    60.001879813            522.128      L1-dcache-loads                                             
+    60.001879813                231      L1-dcache-load-misses     #    0,21% of all L1-dcache hits  
+    60.001879813            264.926      L1-dcache-stores                                            
+    60.001879813            531.734      dTLB-loads                                                  
+    60.001879813      <not counted>      dTLB-load-misses                                              (0,00%)
+    60.001879813    <not supported>      dTLB-prefetch-misses                                        
+    70.002099754     20.096.036.132      L1-dcache-loads                                               (80,00%)
+    70.002099754            224.009      L1-dcache-load-misses     #    0,01% of all L1-dcache hits    (80,00%)
+    70.002099754     10.045.901.181      L1-dcache-stores                                              (80,00%)
+    70.002099754     20.094.331.089      dTLB-loads                                                    (79,97%)
+    70.002099754              4.965      dTLB-load-misses          #    0,00% of all dTLB cache hits   (80,03%)
+    70.002099754    <not supported>      dTLB-prefetch-misses                                        
+    80.002262319     20.116.638.775      L1-dcache-loads                                               (80,00%)
+    80.002262319            203.499      L1-dcache-load-misses     #    0,00% of all L1-dcache hits    (80,00%)
+    80.002262319     10.058.539.928      L1-dcache-stores                                              (80,00%)
+    80.002262319     20.118.897.645      dTLB-loads                                                    (79,98%)
+    80.002262319              4.786      dTLB-load-misses          #    0,00% of all dTLB cache hits   (80,01%)
+    80.002262319    <not supported>      dTLB-prefetch-misses                                        
+    90.002412318     20.092.931.516      L1-dcache-loads                                               (80,00%)
+    90.002412318            227.222      L1-dcache-load-misses     #    0,00% of all L1-dcache hits    (80,00%)
+    90.002412318     10.049.328.493      L1-dcache-stores                                              (80,00%)
+    90.002412318     20.096.830.216      dTLB-loads                                                    (79,99%)
+    90.002412318              3.771      dTLB-load-misses          #    0,00% of all dTLB cache hits   (80,01%)
+    90.002412318    <not supported>      dTLB-prefetch-misses                                        
+   100.002562891     20.115.859.192      L1-dcache-loads                                               (80,00%)
+   100.002562891            206.964      L1-dcache-load-misses     #    0,00% of all L1-dcache hits    (80,00%)
+   100.002562891     10.060.349.593      L1-dcache-stores                                              (80,00%)
+   100.002562891     20.116.884.375      dTLB-loads                                                    (79,99%)
+   100.002562891              4.533      dTLB-load-misses          #    0,00% of all dTLB cache hits   (80,01%)
+   100.002562891    <not supported>      dTLB-prefetch-misses                                        
+   110.002712084     20.113.861.276      L1-dcache-loads                                               (80,00%)
+   110.002712084            220.906      L1-dcache-load-misses     #    0,00% of all L1-dcache hits    (80,00%)
+   110.002712084     10.052.553.441      L1-dcache-stores                                              (80,00%)
+   110.002712084     20.105.757.264      dTLB-loads                                                    (79,99%)
+   110.002712084              4.764      dTLB-load-misses          #    0,00% of all dTLB cache hits   (80,01%)
+   110.002712084    <not supported>      dTLB-prefetch-misses                                        
+   119.438373187     18.973.844.915      L1-dcache-loads                                               (80,00%)
+   119.438373187            190.481      L1-dcache-load-misses     #    0,00% of all L1-dcache hits    (80,00%)
+   119.438373187      9.488.743.500      L1-dcache-stores                                              (80,01%)
+   119.438373187     18.975.498.069      dTLB-loads                                                    (79,99%)
+   119.438373187              5.938      dTLB-load-misses          #    0,00% of all dTLB cache hits   (80,00%)
+   119.438373187    <not supported>      dTLB-prefetch-misses                                        
