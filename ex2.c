@@ -11,13 +11,13 @@ void random_read (FILE *fp) {
 	char *read_buf = (char *) malloc (sizeof (char) * TWO_MB);
 	fseek (fp, rand () % FILE_SIZE - TWO_MB, 0);
 	fread (read_buf, FIVE_MB, 1, fp);
-	printf ("%s\n", read_buf);
 }
 
 void random_write (FILE *fp) {
 	char *alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char c = alpha[rand () % strlen (alpha)];
-	fwrite ((void *) &alpha[rand () % strlen (alpha)], 1, TWO_MB, fp);
+	fseek (fp, rand () % FILE_SIZE - TWO_MB, 0);
+	fwrite ((void *) &c, 1, TWO_MB, fp);
 }
 
 void sequential_read (FILE *fp) {
@@ -27,27 +27,51 @@ void sequential_read (FILE *fp) {
 }
 
 void sequential_write (FILE *fp) {
-	
+	char *alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        char c = alpha[rand () % strlen (alpha)];
+        fwrite ((void *) &c, 1, TWO_MB, fp);
 } 
 
 int main () {
-	clock_t start, end;
+	time_t start, end;
 	srand (time (NULL));
-	char *filename = "1GB.bin";
+	char *filename = "sample.txt";
+	long int t = 5;
+	long int elapsed;
 	FILE *fp = fopen (filename, "rb+");
 
-	start = clock ();
+	start = time(NULL);
 	do {
-		printf ("Reading 2MB\n");
 		random_read (fp);
-		end = clock ();
-	} while (((double) (end - start) / CLOCKS_PER_SEC) < 60);
-
-	start = clock ();
+		end = time (NULL);
+		elapsed = (end - start);
+	} while (elapsed < t);
+	
+	printf ("finished random reads\n");
+	start = time (NULL);
 	do {
 		random_write (fp);
-		end = clock ();
-	} while (((double) (end - start) / CLOCKS_PER_SEC) < 60);
+		end = time (NULL);
+		elapsed = (end - start);
+	} while (elapsed < t);
 
+	printf ("finished random writes\n");
+	fseek (fp, 0, 0);
+	start = time (NULL);
+	do {
+		sequential_write (fp);
+		end = time(NULL);
+		elapsed = (end - start);	
+	} while (elapsed < t);
+
+	printf ("finished sequential reads\n");
+	fseek (fp, 0, 0);
+	start = time (NULL);
+        do {
+                sequential_read (fp);
+                end = time (NULL);
+		elapsed = (end - start);
+        } while (elapsed < t);
+	printf ("finished sequential writes\n");
 	fclose (fp);
 }

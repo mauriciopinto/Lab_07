@@ -4,18 +4,19 @@
 #include <unistd.h>
 #include <limits.h>
 
+#define N 1288490188
 #define MINUTES 1
 
 int main (void) {
-    sleep (60 * MINUTES);
-    char *buffer = (char *) malloc (sizeof (char) * INT_MAX);
+    //sleep (60 * MINUTES);
+    int *buffer = (int *) malloc (sizeof (int) * N);
     srand(time(NULL));
 
     time_t start_time = time(NULL);
 
     while (time(NULL) - start_time < MINUTES * 60) {
-        int i = rand () % INT_MAX;
-    	char j = buffer[i];
+        int i = rand () % N;
+    	int j = buffer[i];
     }
 
     return 0;
